@@ -1,6 +1,6 @@
 <?php
 
-    //***************************** //
+    // **************************** //
     // Dynamic plug-in load on PHP. //
     // Example.                     //
     // Author: Andrew S. Apanasenko //
@@ -34,10 +34,10 @@
             echo 'Fuction ['.$fn.'] is corrupted!';
     }
 
-    foreach($modname as $mod) {
-        foreach ($modparam[$mod]['func'] as $key => $value) {
+    foreach($modparam as $mod) {
+        foreach ($mod['func'] as $key => $value) {
             $filters[$key] = $value;
-            $menu .= '<a href="index.php?fn='.$key.'">'.$modparam[$mod]['title'].'</a><br>';
+            $menu .= '<a href="index.php?fn='.$key.'">'.$mod['title'].'</a><br>';
         }
     }
 
