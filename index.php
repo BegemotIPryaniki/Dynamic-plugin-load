@@ -12,7 +12,7 @@
 
     function getModulesList() {
         $array = array_diff(scandir(__INCLUDE_PATH__), array('.', '..'));
-        foreach($array as &$elem) {
+        foreach($array as $elem) {
             $elem_tmp = $elem;
             if(!is_dir($elem_tmp)&&preg_match('/[^\s]*[.]inc[.]php$/mi', $elem))
                 $elem = $elem_tmp;
