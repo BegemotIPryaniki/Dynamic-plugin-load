@@ -7,15 +7,13 @@
     // Mail: andrewa@nicos.ru       //
     // **************************** //
 
-    if(defined('__MAIN_FILE__')){
-        $modname[] = 'modulea';
-        $modparam['modulea']['title'] = 'Included module A';
-        $modparam['modulea']['func'] = array('moda' => 'main_ModuleA');
-    }
-    else
+    if(!defined('__MAIN_FILE__')) 
         die('Something is missing!');
 
-
+   $modname[] = 'modulea';
+   $modparam['modulea']['title'] = 'Included module A';
+   $modparam['modulea']['func'] = array('moda' => 'main_ModuleA');
+   
     function main_ModuleA()
     {
         print 'This is function response from plug-in Module A';
