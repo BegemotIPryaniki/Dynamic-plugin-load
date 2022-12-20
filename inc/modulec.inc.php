@@ -7,14 +7,12 @@
     // Mail: andrewa@nicos.ru       //
     // **************************** //
 
-    if(defined('__MAIN_FILE__')){
-        $modname[] = 'modulec';
-        $modparam['modulec']['title'] = 'Included module C';
-        $modparam['modulec']['func'] = array('modc' => 'main_ModuleC');
-    }
-    else
+    if(!defined('__MAIN_FILE__')) 
         die('Something is missing!');
 
+    $modname[] = 'modulec';
+    $modparam['modulec']['title'] = 'Included module C';
+    $modparam['modulec']['func'] = array('modc' => 'main_ModuleC');
 
     function main_ModuleC()
     {
